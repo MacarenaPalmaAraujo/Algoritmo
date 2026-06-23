@@ -1,0 +1,242 @@
+/* Variables de Diseño Premium */
+:root {
+  --gold: #dfb743;
+  --pink: #ff2a6d;
+  --black-pure: #030303;
+  --card-dark: #121212;
+  --text-gray: #8e8e8e;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--black-pure);
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+/* Cabecera Oficial Premium */
+.gossip-header {
+  background-color: #0a0a0a;
+  text-align: center;
+  padding: 60px 20px;
+  border-bottom: 2px solid var(--gold);
+}
+
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 4rem;
+  letter-spacing: 10px;
+  color: var(--gold);
+  text-shadow: 0 0 20px rgba(223, 183, 67, 0.4);
+  margin-bottom: 5px;
+}
+
+.tagline {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  color: #cccccc;
+  font-size: 1.15rem;
+  margin-bottom: 20px;
+}
+
+.alert-banner {
+  color: var(--pink);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 3px;
+}
+
+.live-dot {
+  height: 10px;
+  width: 10px;
+  background-color: var(--pink);
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 6px;
+  animation: parpadeo 1.2s infinite;
+}
+
+@keyframes parpadeo {
+  50% { opacity: 0; }
+}
+
+/* Contenedor Principal */
+.main-content {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 50px 20px;
+}
+
+/* Panel de Control de Búsqueda */
+.search-section {
+  background: var(--card-dark);
+  border: 1px solid #1f1f1f;
+  border-top: 3px solid var(--gold);
+  padding: 30px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.search-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 4px;
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+
+.search-box input {
+  padding: 14px 20px;
+  background-color: var(--black-pure);
+  border: 1px solid #333;
+  color: white;
+  width: 250px;
+  text-align: center;
+  outline: none;
+  font-size: 1rem;
+}
+
+.search-box input:focus {
+  border-color: var(--gold);
+}
+
+.search-box button {
+  padding: 15px 25px;
+  background-color: var(--gold);
+  color: black;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.search-box button:hover {
+  background-color: white;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+.btn-reset {
+  background-color: #1a1a1a !important;
+  color: var(--text-gray) !important;
+  border: 1px solid #2a2a2a !important;
+  margin-left: 8px;
+}
+
+/* Grilla de Tarjetas */
+.gossip-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+}
+
+/* Diseño de la Tarjeta */
+.gossip-post-card {
+  background: var(--card-dark);
+  border: 1px solid #1a1a1a;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.3s;
+}
+
+.gossip-post-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 20px 40px rgba(223, 183, 67, 0.15);
+  border-color: var(--gold);
+}
+
+.card-img-container {
+  position: relative;
+  height: 340px;
+  background-color: #000;
+}
+
+.card-img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+.spotted-badge {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  background-color: rgba(3, 3, 3, 0.9);
+  color: var(--gold);
+  border: 1px solid var(--gold);
+  font-size: 0.7rem;
+  padding: 5px 12px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.card-body {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.card-alias {
+  font-family: 'Playfair Display', serif;
+  color: var(--gold);
+  font-weight: bold;
+  font-size: 1.35rem;
+}
+
+.scandal-status {
+  color: var(--pink);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin-top: 6px;
+}
+
+.scandal-text {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #e5e5e5;
+  background-color: #160f11;
+  border-left: 2px solid var(--pink);
+  padding: 15px;
+  margin-top: 15px;
+  flex-grow: 1;
+}
+
+.tech-intercept {
+  margin-top: 25px;
+  padding-top: 15px;
+  border-top: 1px dashed #252525;
+  font-size: 0.75rem;
+  color: var(--text-gray);
+  line-height: 1.6;
+}
+
+/* Footer Oficial */
+.gossip-footer {
+  background-color: #0a0a0a;
+  color: #555;
+  text-align: center;
+  padding: 60px 20px;
+  margin-top: 100px;
+  border-top: 1px solid var(--gold);
+}
+
+.xoxo {
+  font-family: 'Playfair Display', serif;
+  color: white;
+  margin-top: 15px;
+  letter-spacing: 3px;
+  font-size: 1.25rem;
+}
